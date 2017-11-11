@@ -61,6 +61,16 @@ background-color:#e1f5fe;
                     alert("Password Length should be above 7 letters");
                 }
             }
+             }
+            function checkmail(value)
+            {
+                email1=document.getElementsByName("t1");
+                if(email1!=value )
+                {
+                    alert("Entered Email Addresses should be same");
+                }
+                
+            }
         </script>
             
     </head>
@@ -70,7 +80,7 @@ background-color:#e1f5fe;
         <h2 style="position:absolute;top:50px;left: 340px;">Register</h2>
         <form onreset="DoReset()" action="servreg" style="background-color: white;border: 1px black solid;border-radius: 4px;width:500px;height:200px;padding-left:50px;padding-top: 20px;box-shadow: 10px 10px 5px grey;position: absolute;margin-top: 100px;margin-left: 300px;">
                 <input type="text" name="t1"  placeholder="Enter Email" maxlength="30" autofocus="true" style="position: relative;margin-top: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="t2" placeholder="First Name"><br><br>
-             <input type="text" name="t3"  placeholder="ReEnter Email" maxlength="30"  style="position: relative;margin-top: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type="text" name="t3" onblur="checkmail(this.value)" placeholder="ReEnter Email" maxlength="30"  style="position: relative;margin-top: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="text" name="t4" placeholder="Last Name" ><br><br>
                 <input type="text" name="t5" placeholder="Password" onblur="checkpass(this.value)"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="text" name="t6" placeholder="Mobile Phone"  maxlength="10"><br><br>
